@@ -15,12 +15,12 @@ MonoBehaviour:
   name: Kuroka
   move: 9
   jumpHeight: 2
-  moveSpeed: 12
+  moveSpeed: 6
   jumpVelocity: 4.5
   speed: 92
   basicDamage: 10
   attackRange: 1
-  health: 80
+  health: 67
   attackType: 0
   heightAttack: 1
   canFly: 0

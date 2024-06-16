@@ -54,6 +54,9 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        // For development purposes, reset the PlayerPrefs
+        PlayerPrefs.SetInt("HasPlayedIntro", 0);
+
         /* 
         Inicializa las estadísticas de los personajes y añade listeners 
         a los botones para manejar los eventos de clic.
@@ -70,6 +73,7 @@ public class UIManager : MonoBehaviour
         passTurnButton.onClick.AddListener(OnPassTurnButtonClicked);
         restartButton.onClick.AddListener(OnRestartButtonClicked);
         mainMenuButton.onClick.AddListener(OnMainMenuButtonClicked);
+
         HidePlayerControls();
         HideGameOverScreen();
 
@@ -106,7 +110,7 @@ public class UIManager : MonoBehaviour
         {
             yield return null;
         }
-        
+
         introMusic.Stop();
         sceneMusic.Play();
         PlayerPrefs.SetInt("HasPlayedIntro", 1);

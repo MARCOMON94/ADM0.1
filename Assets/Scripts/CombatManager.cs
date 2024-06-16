@@ -46,7 +46,7 @@ public class CombatManager : MonoBehaviour
 
         // Ajustar la rotación del atacante para que mire en una dirección recta (norte, sur, este, oeste)
         AdjustRotation(attacker);
-        attacker.StartCoroutine(WaitAndEndTurn(attacker, 1f));
+        //attacker.StartCoroutine(WaitAndEndTurn(attacker, 1f));
     }
 
     private void AdjustRotation(TacticsMove unit)
@@ -101,7 +101,7 @@ public class CombatManager : MonoBehaviour
                     StartCoroutine(DestroyAfterDelay(target.gameObject, 1f));
                 }
             }
-            attacker.StartCoroutine(WaitAndEndTurn(attacker, 1f));
+            //attacker.StartCoroutine(WaitAndEndTurn(attacker, 1f));
         }
     }
 
@@ -111,11 +111,11 @@ public class CombatManager : MonoBehaviour
         Destroy(target);
     }
 
-    private IEnumerator WaitAndEndTurn(TacticsMove unit, float delay)
+    /*private IEnumerator WaitAndEndTurn(TacticsMove unit, float delay)
     {
         yield return new WaitForSeconds(delay);
         unit.EndTurn();
-    }
+    }*/
 
 
 }
